@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Solicita SI</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
+  <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="teal" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" height="40" width="150" src="image/uff_logo.png"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#info">Contato</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="home">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Solicita SI</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Sistema de solicitações da Secretaria de Sistemas de Informação da UFF</h5>
+      </div>
+    </div>
+  </div>
+  <div class="section no-pad-bot grey lighten-1" id="principal">
+    <div class="container center valign-wrapper">
+      <div class="row">
+        <div class="col l6 m12 s12" style="font-size:1.3em; text-align: justify; padding-right:1em;">
+          
+          <p>Bem-vindo ao SolicitaSI.</p>
+
+          <p>Faça login ao lado para continuar.</p>
+
+          <p>Lembre-se que todas as solicitações requerem impressão do formulário do pedido e este deve ser entregue à secretaria para que seja dada continuidade ao processo.</p>
+
+          <p>Importante: O sistema NÃO é integrado ao IdUFF e pode apresentar algumas informações desatualizadas ao longo do período.</p>
+        </div>
+        <div class="col l6 m12 s12 valign">
+          <div class="row card-panel white darken-1">
+            <h5>Login</h5>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email IdUFF</label>
+                </div>
+              </div>
+              <div class="row" style="text-align: right;">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Senha</label>
+                </div>
+                <a class="teal-text" href="senha-esquecida">Esqueci a senha</a>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <a id="submit" class="waves-effect waves-light btn">Entrar</a>
+                  <label for="submit"></label>
+                </div>
+                <div class="input-field col s6">
+                  <a id="submit" class="waves-effect waves-light btn">Cadastro</a>
+                  <label for="submit"></label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row" id="sobre">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="material-icons">swap_horiz</i></h2>
+            <h5 class="center">Ajuste no plano de estudo</h5>
+
+            <p class="light">Solicite inclusões e cancelamentos de disciplina e troca de turma quando houver a possibilidade.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="material-icons">note_add</i></h2>
+            <h5 class="center">Outros pedidos à Secretaria</h5>
+
+            <p class="light">Solicite equivalência de disciplina, aprovação de atividades complementares e permissão de estágio.</p>
+          </div>
+        </div>
+
+        
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="material-icons">info</i></h2>
+            <h5 class="center">Consulte suas solicitações</h5>
+
+            <p class="light">Todas suas solicitações estão disponíveis para consulta, alteração e reimpressão de formulário.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer deep-purple lighten-2" id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col l7 s12">
+          <h5 class="white-text">Secretaria de Sistemas de Informação</h5>
+          <p class="grey-text text-lighten-4">Horário de funcionamento:<br>Segunda à sexta das 17h - 21h</p>
+
+
+        </div>
+        <div class="col l5 s12">
+          <h5 class="white-text">Links úteis</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Instituto de Computação</a></li>
+            <li><a class="white-text" href="#!">Manual do aluno</a></li>
+            <li><a class="white-text" href="#!">Regras para estágio</a></li>
+            <li><a class="white-text" href="#!">Resolução sobre atividades complementares</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Design por Bárbara Borges, Gabriel Mantini, Leonardo Gargano, Romário Gomes e Yasmine Malafaia usando <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
