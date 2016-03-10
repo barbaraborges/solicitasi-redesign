@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Solicita SI</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
+  <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="Chart.js-master/Chart.js"></script>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <ul id="sub-menu-1" class="dropdown-content">
+      <li><a href="alterar_dados.html">Alterar seus dados</a></li>
+      <li><a href="alterar_senha.html">Alterar senha</a></li>
+    </ul>
+    <!--Submenu Solicitações-->
+    <ul id="sub-menu-2" class="dropdown-content">
+      <li><a href="dispensa_disciplina.html">Dispensa de disciplina</a></li>
+      <li><a href="estagio.html">Estágio</a></li>
+      <li><a href="ac.html">Atividade Complementar</a></li>
+      <li><a href="tcc.html">Cadastro TCC</a></li>
+    </ul>
+    <!--Submenu Informações-->
+    <ul id="sub-menu-3" class="dropdown-content">
+      <li><a href="regras_estagio.html">Regras Para Estágio</a></li>
+      <li><a href="info_ac.html">Atividade Complementar</a></li>
+      <li class="divider"></li>
+      <li><a href="mapa_site.html">Mapa do Site</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <nav class="teal" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="responsive-img hide-on-large-only" height="40" width="150" src="image/uff_logo.png" alt="Logo UFF"></a>
+
+        <ul class="hide-on-med-and-down">
+          <li class="active"><a href="principal.html">Principal</a></li>
+          <li><a class="dropdown-button" data-activates="sub-menu-1">Dados Pessoais ⌄</a></li>
+          <li><a href="#sobre">Plano de Estudos</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="sub-menu-2">Solicitações ⌄</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="sub-menu-3">Informações ⌄</a></li>
+          <li><a href="#sobre">Sair</a></li>
+        </ul>
+        <!--Menu mobile-->
+        <ul id="nav-mobile" class="side-nav collapsible" data-collapsible="accordion">
+          <li><a href="principal.html">Página Principal</a></li>
+          <li class="divider"></li>
+          <li><a href="alterar_dados.html">Alterar seus dados</a></li>
+          <li><a href="alterar_senha.html">Alterar senha</a></li>
+          <li class="divider"></li>
+          <li><a href="dispensa_disciplina.html">Dispensa de disciplina</a></li>
+          <li><a href="estagio.html">Estágio</a></li>
+          <li><a href="ac.html">Atividade Complementar</a></li>
+          <li><a href="tcc.html">Cadastro TCC</a></li>
+          <li class="divider"></li>
+          <li><a href="regras_estagio.html">Regras Para Estágio</a></li>
+          <li><a href="info_ac.html">Atividade Complementar</a></li>
+          <li class="divider"></li>
+          <li><a href="mapa_site.html">Mapa do Site</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li class="divider"></li>
+          <li><a href="sair.html">Sair</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a><span class="hide-on-large-only">Menu</span>
+      </div>
+    </nav>
+  </div>
+  <div class="section no-pad-bot" id="home">
+    <div class="container">
+      <br>
+      <h1 class="header center orange-text">Solicita SI</h1>
+    </div>
+  </div>
+  <div class="section no-pad-bot grey lighten-1" id="principal">
+    <div class="container">
+      <div class="row">
+        <div class="small card-panel">
+          <div class="row">
+            <div class="col s9">
+              <h5>Informações do aluno: João Silva e Souza</h5>
+              <p> Id: 447  CR: 6.78 <br/>
+                  Matricula: 113083054 <br/>
+                  CPF: 133.704.477-62 <br/>
+                  Email: basborges@gmail.com <br/>
+                  End.: RUA DR MARIO VIANA, 277 APTO 301 
+                  Bairro: SANTA ROSA <br/>
+                  Cidade: NITEROI <br/>
+                  Cep: 24241-000 <br/>
+                  Estado: RJ <br/>
+                  Tel.: (21)2714-6441 / (21)8348-2898 <br/>
+              </p>
+            </div>
+            <div class="col s3">
+              <img class="responsive-img " src="image/silvio.jpg">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <div class="card-panel" height="225" width="300">
+                <h5>Histórico do CR</h5>
+                <canvas id="canvas"></canvas>
+                <script>
+                  var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+                  var lineChartData = {
+                    labels : ["2013.1","2013.2","2014.1","2014.2","2015.1","2015.2","2016.1"],
+                    datasets : [
+                      {
+                        label: "My First dataset",
+                        fillColor : "rgba(220,220,220,0.2)",
+                        strokeColor : "rgba(220,220,220,1)",
+                        pointColor : "rgba(220,220,220,1)",
+                        pointStrokeColor : "#fff",
+                        pointHighlightFill : "#fff",
+                        pointHighlightStroke : "rgba(220,220,220,1)",
+                        data : [7, 8.4, 6, 7.45, 8.7, 4.9, 6]
+                      }
+                    ]
+
+                  }
+
+                window.onload = function(){
+                  var ctx = document.getElementById("canvas").getContext("2d");
+                  window.myLine = new Chart(ctx).Line(lineChartData, {
+                    responsive: true
+                  });
+                }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer class="page-footer deep-purple lighten-2" id="info">
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright BSI - UFF 2016 Todos os Direitos Reservados
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
