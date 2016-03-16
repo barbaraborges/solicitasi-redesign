@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Solicita SI</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
+  <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="Chart.js-master/Chart.js"></script>
+  <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      
+    $("#navbar").load("navbar.html");
+      
+  });
+  </script>
+
+</head>
+<body>
+  <!-- Aqui carrega a barra de navegação -->
+  <div id="navbar"></div>
+
+  <div class="section no-pad-top no-pad-bot" id="navegacao">
+    <nav>
+      <div class="nav-wrapper teal lighten-2">
+        <div class="col s12">
+          <span>Você está aqui</span>
+          <a class="breadcrumb">Dados Pessoais</a>
+          <a href="alterar_dados.html" class="breadcrumb">Alterar senha</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="section no-pad-bot" id="home">
+    <div class="container">
+      <h1 class="header center orange-text">Solicita SI</h1>
+    </div>
+  </div>
+  <div class="section no-pad-bot grey lighten-1" id="principal">
+    <div class="container center-align">
+      <div class="row center-align">
+        <div class="col push-l2 push-m2 l8 m8 s12">
+          <div class="card-panel small">
+            <div class="row">
+              <h5>Alterar Senha</h5>
+            </div>
+            <div class="row center-align">
+              <div class="col s12 center">
+                <div class="input-field">
+                  <input id="senha" type="password" class="validate">
+                  <label for="senha">Digite sua senha</label>
+                </div>
+                <div class="input-field">
+                  <input id="nova_senha" type="password" class="validate">
+                  <label for="nova_senha">Nova senha</label>
+                </div>
+                <div class="input-field">
+                  <input id="confirma_senha" type="password" class="validate">
+                  <label for="confirma_senha">Confirma senha</label>
+                </div>
+              </div>
+              <div class="col s12 center">
+                <br/>
+                <a class="waves-effect waves-light btn">Salvar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer class="page-footer deep-purple lighten-2" id="info">
+    <div class="footer-copyright">
+      <div class="container">
+      Copyright BSI - UFF 2016 Todos os Direitos Reservados
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
