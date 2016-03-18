@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Alterar Dados - Solicita SI</title>
+  <title>ALterar Senha - Solicita SI</title>
   <meta charset="UTF-8">
   <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
   <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
@@ -14,6 +14,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script src="Chart.js-master/Chart.js"></script>
   <script src="js/jquery-2.2.1.min.js"></script>
+
 </head>
 <body>
   <!-- INICIO NAVEGACAO -->
@@ -80,7 +81,7 @@
         <div class="col s12">
           <span>Você está aqui</span>
           <a class="breadcrumb">Dados Pessoais</a>
-          <a href="alterar_dados.html" class="breadcrumb">Editar seus dados</a>
+          <a href="alterar_dados.html" class="breadcrumb">Alterar senha</a>
         </div>
       </div>
     </nav>
@@ -91,64 +92,25 @@
     </div>
   </div>
   <div class="section no-pad-bot grey lighten-1" id="principal">
-    <div class="container">
-      <div class="row">
-        <div class="small card-panel">
-          <div class="row center-align">
-            <h5>Editar Dados Pessoais</h5>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="000.000.00-00" id="cpf" type="text" class="validate">
-              <label for="cpf">CPF</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="dd/mm/aaaa" id="data_nasc" type="text" class="validate">
-              <label for="data_nasc">Data de Nascimento</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input placeholder="Placeholder" id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
-            <div class="input-field col s12">
-              <input placeholder="Placeholder" id="endereco" type="email" class="validate">
-              <label for="endereco">Endereço</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="cpf" type="text" class="validate">
-              <label for="cpf">Bairro</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="data_nasc" type="text" class="validate">
-              <label for="data_nasc">Cidade</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="cpf" type="text" class="validate">
-              <label for="cpf">Estado</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="00000-000" id="data_nasc" type="text" class="validate">
-              <label for="data_nasc">CEP</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="(00)0000-0000" id="cpf" type="text" class="validate">
-              <label for="cpf">Tel. Fixo</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="(00)0000-0000" id="data_nasc" type="text" class="validate">
-              <label for="data_nasc">Tel. Celular</label>
-            </div>
+    <div class="container center-align">
+      <div class="row center-align">
+        <div class="col push-l2 push-m2 l8 m8 s12">
+          <div class="card-panel small">
             <div class="row">
+              <h5>Solicitação de estágio não obrigatório</h5>
+            </div>
+            <div class="row center-align">
               <div class="col s12 center">
-                <br/>
+                <div class="input-field">
+                  <input id="empresa" type="text">
+                  <label for="empresa">Nome da empresa</label>
+                </div>
+                <div>
+                  <input id="date-picker" type="date">
+                </div>
+              </div>
+              <div class="col s12 center">
+                <br/><br/>
                 <a class="waves-effect waves-light btn">Salvar</a>
               </div>
             </div>
