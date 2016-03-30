@@ -55,6 +55,8 @@
           <li><a href="alterar_dados.html">Alterar seus dados</a></li>
           <li><a href="alterar_senha.html">Alterar senha</a></li>
           <li class="divider"></li>
+          <li><a href="plano_de_estudos.html">Plano de Estudos</a></li>
+          <li class="divider"></li>
           <li><a href="dispensa_disciplina.html">Dispensa de disciplina</a></li>
           <li><a href="estagio.html">Estágio</a></li>
           <li><a href="ac.html">Atividade Complementar</a></li>
@@ -80,7 +82,7 @@
         <div class="col s12">
           <span>Você está aqui</span>
           <a class="breadcrumb">Dados Pessoais</a>
-          <a href="alterar_dados.html" class="breadcrumb">Editar seus dados</a>
+          <a href="alterar_dados.html" class="breadcrumb">Alterar seus dados</a>
         </div>
       </div>
     </nav>
@@ -99,52 +101,44 @@
           </div>
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="000.000.00-00" id="cpf" type="text" class="validate">
+              <input placeholder="000.000.000-00" id="cpf" type="text" class="validate" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}">
               <label for="cpf">CPF</label>
             </div>
             <div class="input-field col s6">
-              <input placeholder="dd/mm/aaaa" id="data_nasc" type="text" class="validate">
+              <input placeholder="dd/mm/aaaa" id="data_nasc" type="text" class="validate" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][0-9][0-9][0-9]">
               <label for="data_nasc">Data de Nascimento</label>
             </div>
-          </div>
-          <div class="row">
             <div class="input-field col s12">
-              <input placeholder="Placeholder" id="email" type="email" class="validate">
+              <input id="email" type="email" class="validate" pattern=".{3,}@.{2,}\..{2,5}">
               <label for="email">Email</label>
             </div>
             <div class="input-field col s12">
-              <input placeholder="Placeholder" id="endereco" type="email" class="validate">
+              <input id="endereco" type="email" class="validate" pattern=".{10,}">
               <label for="endereco">Endereço</label>
             </div>
-          </div>
-          <div class="row">
             <div class="input-field col s6">
-              <input id="cpf" type="text" class="validate">
+              <input id="cpf" type="text" class="validate" pattern=".{3,}">
               <label for="cpf">Bairro</label>
             </div>
             <div class="input-field col s6">
-              <input id="data_nasc" type="text" class="validate">
+              <input id="data_nasc" type="text" class="validate" pattern=".{3,}">
               <label for="data_nasc">Cidade</label>
             </div>
-          </div>
-          <div class="row">
             <div class="input-field col s6">
-              <input id="cpf" type="text" class="validate">
-              <label for="cpf">Estado</label>
+              <input id="estado" type="text" class="validate">
+              <label for="estado">Estado</label>
             </div>
             <div class="input-field col s6">
-              <input placeholder="00000-000" id="data_nasc" type="text" class="validate">
-              <label for="data_nasc">CEP</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="(00)0000-0000" id="cpf" type="text" class="validate">
-              <label for="cpf">Tel. Fixo</label>
+              <input placeholder="00000-000" id="cep" type="text" class="validate" pattern="[0-9]{5}-[0-9]{3}">
+              <label for="cep">CEP</label>
             </div>
             <div class="input-field col s6">
-              <input placeholder="(00)0000-0000" id="data_nasc" type="text" class="validate">
-              <label for="data_nasc">Tel. Celular</label>
+              <input placeholder="(00)0000-0000" id="tel_fixo" type="text" class="validate" pattern="\([1-9][0-9]\)[1-9][0-9]{3}-[0-9]{4}">
+              <label for="tel_fixo">Tel. Fixo</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="(00)00000-0000" id="tel_celular" type="text" class="validate" pattern="\([1-9][0-9]\)9[1-9][0-9]{3}-[0-9]{4}">
+              <label for="tel_celular">Tel. Celular</label>
             </div>
             <div class="row">
               <div class="col s12 center">

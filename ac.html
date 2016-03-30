@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Plano de Estudos - Solicita SI</title>
+  <title>Dispensa de Disciplina - Solicita SI</title>
   <meta charset="UTF-8">
   <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
   <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
@@ -77,9 +77,8 @@
       <div class="nav-wrapper teal lighten-2">
         <div class="col s12">
           <span>Você está aqui</span>
-          <a href="principal.html" class="breadcrumb">Principal</a>
           <a class="breadcrumb">Solicitações</a>
-          <a class="breadcrumb">Atividades Complementares</a>
+          <a href="ac.html" class="breadcrumb">Atividades Complementares</a>
         </div>
       </div>
     </nav>
@@ -94,13 +93,51 @@
       <div class="row">
         <div class="small card-panel">
           <div class="row">
-            <div class="col s12">
+            <div class="col s12 center">
               <h5>Solicitação de Atividade Complementar</h5>
             </div>
           </div>
           <div class="row">
             <div class="col s12">
-            
+      
+              <table class="stripped highlight">
+                <thead>
+                  <tr>
+                      <th data-field="codigo">Número do Processo</th>
+                      <th data-field="codigo">Nome da Disciplina</th>
+                      <th data-field="nome_disciplina">Data do Pedido</th>
+                      <th data-field="turma">Data Conclusão</th>
+                      <th data-field="botao-detalhes"></th>
+                      <th data-field="botao-alterar-ou-imprimir"></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>011259/2014-22</td>
+                    <td>Gerência de Projeto de Software</td>
+                    <td>30/03/2014</td>
+                    <td>28/04/2014</td>
+                    <td><a class="waves-effect deep-purple lighten-2 lighten-2 waves-purple btn">Detalhes</a></td>
+                    <td><a class="waves-effect deep-purple lighten-2 lighten-2 waves-purple btn">Impressão&nbsp;Formulário</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>011259/2014-22</td>
+                    <td>Computação e Sociedade</td>
+                    <td>30/03/2014</td>
+                    <td>Não Concluído</td>
+                    <td><a class="waves-effect deep-purple lighten-2 lighten-2 waves-purple btn">Detalhes</a></td>
+                    <td><a class="waves-effect deep-purple lighten-2 lighten-2 waves-purple btn">Impressão&nbsp;Formulário</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <br/>
+              <span class="col s12 center">
+                <a href="incluir_ac.html" class="waves-effect deep-purple lighten-2 lighten-2 waves-purple btn">Novo Pedido</a>
+              </span>
+
             </div>
           </div>
         </div>

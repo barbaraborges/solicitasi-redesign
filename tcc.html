@@ -54,6 +54,8 @@
           <li><a href="alterar_dados.html">Alterar seus dados</a></li>
           <li><a href="alterar_senha.html">Alterar senha</a></li>
           <li class="divider"></li>
+          <li><a href="plano_de_estudos.html">Plano de Estudos</a></li>
+          <li class="divider"></li>
           <li><a href="dispensa_disciplina.html">Dispensa de disciplina</a></li>
           <li><a href="estagio.html">Estágio</a></li>
           <li><a href="ac.html">Atividade Complementar</a></li>
@@ -77,9 +79,8 @@
       <div class="nav-wrapper teal lighten-2">
         <div class="col s12">
           <span>Você está aqui</span>
-          <a href="principal.html" class="breadcrumb">Principal</a>
           <a class="breadcrumb">Solicitações</a>
-          <a class="breadcrumb">Cadastro TCC</a>
+          <a href="tcc.html" class="breadcrumb">Cadastro TCC</a>
         </div>
       </div>
     </nav>
@@ -94,13 +95,33 @@
       <div class="row">
         <div class="small card-panel">
           <div class="row">
-            <div class="col s12">
+            <div class="col s12 center">
               <h5>Cadastro de Tese de Conclusão de Curso</h5>
             </div>
           </div>
           <div class="row">
             <div class="col s12">
-            
+              <form>
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <input id="titulo" type="text" title="Título do Projeto" required>
+                    <label for="titulo">Título da Tese / Projeto</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="professor" type="text" title="Professor Orientador" required>
+                    <label for="professor">Professor Orientador</label>
+                  </div>
+                  <div class="input-field">
+                    <textarea id="resumo" class="materialize-textarea"></textarea>
+                    <label for="resumo">Resumo da Tese / Projeto</label>
+                  </div>
+                </div>
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <a class="waves-effect waves-light btn" type="submit">Salvar</a>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

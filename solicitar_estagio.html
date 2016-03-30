@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>ALterar Senha - Solicita SI</title>
+  <title>Solicitação de Estágio - Solicita SI</title>
   <meta charset="UTF-8">
   <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
   <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
@@ -12,8 +12,16 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="Chart.js-master/Chart.js"></script>
   <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 13 // Creates a dropdown of 15 years to control year
+      });
+      $('select').material_select();
+    });
+  </script>
 
 </head>
 <body>
@@ -56,8 +64,6 @@
           <li><a href="alterar_dados.html">Alterar seus dados</a></li>
           <li><a href="alterar_senha.html">Alterar senha</a></li>
           <li class="divider"></li>
-          <li><a href="plano_de_estudos.html">Plano de Estudos</a></li>
-          <li class="divider"></li>
           <li><a href="dispensa_disciplina.html">Dispensa de disciplina</a></li>
           <li><a href="estagio.html">Estágio</a></li>
           <li><a href="ac.html">Atividade Complementar</a></li>
@@ -82,8 +88,9 @@
       <div class="nav-wrapper teal lighten-2">
         <div class="col s12">
           <span>Você está aqui</span>
-          <a class="breadcrumb">Dados Pessoais</a>
-          <a href="alterar_dados.html" class="breadcrumb">Alterar senha</a>
+          <a class="breadcrumb">Solicitações</a>
+          <a href="estagio.html" class="breadcrumb">Estágio</a>
+          <a href="solicitar_estagio.html" class="breadcrumb">Solicitar Estágio</a>
         </div>
       </div>
     </nav>
@@ -95,35 +102,45 @@
   </div>
   <div class="section no-pad-bot grey lighten-1" id="principal">
     <div class="container center-align">
-      <div class="row center-align">
+      <div class="row center">
         <div class="col push-l2 push-m2 l8 m8 s12">
           <div class="card-panel small">
             <div class="row">
-              <h5>Alterar Senha</h5>
+              <h5>Solicitação de estágio não obrigatório</h5>
             </div>
-            <div class="row center-align">
-              <div class="col s12 center">
-                <div class="input-field">
-                  <input id="senha" type="password" class="validate">
-                  <label for="senha">Digite sua senha</label>
+            <div class="row center">
+
+              <form onsubmit="return salvar(empresa, data-inicio, duracao)">
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <input id="empresa" type="text" title="Nome da empresa" required>
+                    <label for="empresa">Nome da empresa</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="data-inicio" type="date" class="datepicker">
+                    <label for="data-inicio">Data Início</label>
+                  </div>
+                  <div class="input-field">
+                  <select id="duracao">
+                    <option value="1">6 meses</option>
+                    <option value="2">12 meses</option>
+                    <option value="3">18 meses</option>
+                    <option value="4">24 meses</option>
+                  </select>
+                  <label for="duracao">Duração</label>
                 </div>
-                <div class="input-field">
-                  <input id="nova_senha" type="password" class="validate">
-                  <label for="nova_senha">Nova senha</label>
                 </div>
-                <div class="input-field">
-                  <input id="confirma_senha" type="password" class="validate">
-                  <label for="confirma_senha">Confirma senha</label>
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <a class="waves-effect waves-light btn" type="submit">Salvar</a>
+                  </div>
                 </div>
-              </div>
-              <div class="col s12 center">
-                <br/>
-                <a class="waves-effect waves-light btn">Salvar</a>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   </div>

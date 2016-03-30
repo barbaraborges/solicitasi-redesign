@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>ALterar Senha - Solicita SI</title>
+  <title>Inclusão de Atividade Complementar - Solicita SI</title>
   <meta charset="UTF-8">
   <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
   <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
@@ -12,8 +12,16 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="Chart.js-master/Chart.js"></script>
   <script src="js/jquery-2.2.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 13 // Creates a dropdown of 15 years to control year
+      });
+      $('select').material_select();
+    });
+  </script>
 
 </head>
 <body>
@@ -82,8 +90,8 @@
       <div class="nav-wrapper teal lighten-2">
         <div class="col s12">
           <span>Você está aqui</span>
-          <a class="breadcrumb">Dados Pessoais</a>
-          <a href="alterar_dados.html" class="breadcrumb">Alterar senha</a>
+          <a href="plano_de_estudo.html" class="breadcrumb">Plano de Estudo</a>
+          <a href="incluir_disciplina_eletiva.html" class="breadcrumb">Incluir Disciplina Eletiva</a>
         </div>
       </div>
     </nav>
@@ -95,35 +103,63 @@
   </div>
   <div class="section no-pad-bot grey lighten-1" id="principal">
     <div class="container center-align">
-      <div class="row center-align">
-        <div class="col push-l2 push-m2 l8 m8 s12">
+      <div class="row center">
+        <div class="col s12">
           <div class="card-panel small">
             <div class="row">
-              <h5>Alterar Senha</h5>
+              <br/>
+              <h5>Inclusão de Atividade Complementar</h5>
             </div>
-            <div class="row center-align">
-              <div class="col s12 center">
-                <div class="input-field">
-                  <input id="senha" type="password" class="validate">
-                  <label for="senha">Digite sua senha</label>
+            <div class="row center">
+              <br/>
+              <form>
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <select id="tipo-atividade">
+                      <option value="0" disabled selected>SELECIONE</option>
+                      <option value="2">APRESENTAÇÃO DE SEMINÁRIO</option>
+                      <option value="4">CURSO DE LINGUA ESTRANGEIRA</option>
+                      <option value="1">ESTÁGIO NÃO OBRIGATÓRIO</option>
+                      <option value="5">MONITORIA NO DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO</option>
+                      <option value="3">TUTORIA</option>
+                    </select>
+                    <label for="tipo-atividade">Tipo de atividade</label>
+                  </div>
+                  <br/>
+                  <div class="col s12 input-field">
+                    <input id="nome-atividade" type="text">
+                    <label for="nome-atividade">Nome da Atividade</label> 
+                  </div>
+                  <div class="col s12 input-field">
+                    <input id="local-atividade" type="text">
+                    <label for="local-atividade">Local da Atividade</label> 
+                  </div>
+                  <div class="input-field">
+                    <textarea id="resumo" class="materialize-textarea"></textarea>
+                    <label for="resumo">Resumo</label>
+                  </div>
+                  <div class="col s12 input-field">
+                    <input id="professor-responsavel" type="text">
+                    <label for="professor-responsavel">Professor Responsável</label> 
+                  </div>
+                  <div class="col s12 input-field">
+                    <input id="ch-solicitada" type="text">
+                    <label for="ch-solicitada">Carga Horária Solicitada</label> 
+                  </div>
+
                 </div>
-                <div class="input-field">
-                  <input id="nova_senha" type="password" class="validate">
-                  <label for="nova_senha">Nova senha</label>
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <a class="waves-effect waves-light btn" type="submit">Salvar</a>
+                  </div>
                 </div>
-                <div class="input-field">
-                  <input id="confirma_senha" type="password" class="validate">
-                  <label for="confirma_senha">Confirma senha</label>
-                </div>
-              </div>
-              <div class="col s12 center">
-                <br/>
-                <a class="waves-effect waves-light btn">Salvar</a>
-              </div>
+              </form>
+              <br/><br/>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   </div>

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>ALterar Senha - Solicita SI</title>
+  <title>Inclusão de Disciplina Eletiva - Solicita SI</title>
   <meta charset="UTF-8">
   <meta name="description" content="Sistema de solicitações à Secretaria de Sistemas de Informação UFF">
   <meta name="keywords" content="solicitasi, Solicita SI, Secretaria, Sistemas de Informação, UFF, IC, dispensa, formulário, pedido, trancamento, ajuste, atividades complementares, grade, disciplinas">
@@ -12,9 +12,16 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="Chart.js-master/Chart.js"></script>
   <script src="js/jquery-2.2.1.min.js"></script>
-
+  <script>
+    $(document).ready(function () {
+      $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 13 // Creates a dropdown of 15 years to control year
+      });
+      $('select').material_select();
+    });
+  </script>
 </head>
 <body>
   <!-- INICIO NAVEGACAO -->
@@ -82,8 +89,8 @@
       <div class="nav-wrapper teal lighten-2">
         <div class="col s12">
           <span>Você está aqui</span>
-          <a class="breadcrumb">Dados Pessoais</a>
-          <a href="alterar_dados.html" class="breadcrumb">Alterar senha</a>
+          <a href="plano_de_estudo.html" class="breadcrumb">Plano de Estudo</a>
+          <a href="incluir_disciplina_si.html" class="breadcrumb">Incluir Disciplina de SI</a>
         </div>
       </div>
     </nav>
@@ -95,35 +102,46 @@
   </div>
   <div class="section no-pad-bot grey lighten-1" id="principal">
     <div class="container center-align">
-      <div class="row center-align">
+      <div class="row center">
         <div class="col push-l2 push-m2 l8 m8 s12">
           <div class="card-panel small">
             <div class="row">
-              <h5>Alterar Senha</h5>
+              <br/>
+              <h5>Inclusão de Disciplina de SI</h5>
             </div>
-            <div class="row center-align">
-              <div class="col s12 center">
-                <div class="input-field">
-                  <input id="senha" type="password" class="validate">
-                  <label for="senha">Digite sua senha</label>
+            <div class="row center">
+              <br/>
+              <form>
+                <div class="col s12 center">
+                  <div class="input-field">
+                  <select id="disciplina">
+                    <option value="0" disabled selected>SELECIONE</option>
+                    <option value="1">STA00168 - DESENVOLVIMENTO DE PESSOAS</option>
+                    <option value="2">TCC00184 - INTERFACE HOMEM-MÁQUINA</option>
+                    <option value="3">TCC00191 - PROJETO DE APLICAÇÃO I</option>
+                    <option value="4">TCC00222 - COMPUTAÇÃO E SOCIEDADE PARA SISTEMAS DE INFORMAÇÃO</option>
+                    <option value="">TCC00227 - REDES DE COMPUTADORES I PARA SISTEMAS DE INFORMAÇÃO</option>
+                    <option value="">TCC00228 - REDES DE COMPUTADORES II PARA SISTEMAS DE INFORMAÇÃO</option>
+                    <option value="">TCC00229 - TÓPICOS EM REDES DE COMPUTADORES</option>
+                    <option value="">TCC00232 - TÓPICOS ESPECIAIS EM PROJETO E IMPLEMENTAÇÃO DE SISTEMAS I</option>
+                    <option value="">TCC00233 - TÓPICOS ESPECIAIS EM PROJETO E IMPLEMENTAÇÃO DE SISTEMAS II</option>
+                  </select>
+                  <label for="disciplina">Disciplina</label>
+                  <br/><br/>
                 </div>
-                <div class="input-field">
-                  <input id="nova_senha" type="password" class="validate">
-                  <label for="nova_senha">Nova senha</label>
                 </div>
-                <div class="input-field">
-                  <input id="confirma_senha" type="password" class="validate">
-                  <label for="confirma_senha">Confirma senha</label>
+                <div class="col s12 center">
+                  <div class="input-field">
+                    <a class="waves-effect waves-light btn" type="submit">Salvar</a>
+                  </div>
                 </div>
-              </div>
-              <div class="col s12 center">
-                <br/>
-                <a class="waves-effect waves-light btn">Salvar</a>
-              </div>
+              </form>
+              <br/><br/>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   </div>
